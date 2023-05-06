@@ -1,3 +1,9 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+#teste {
+    width: 100px;
+    height: 100px;
+    background-color: red;
+}
