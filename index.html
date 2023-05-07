@@ -185,12 +185,64 @@
   </section>
 
   <!-- Seção mapa -->
-  <section class="flex flex-col items-center bg-gray-100 pt-14 py-6">
-    <h2 class="pb-12 text-5xl font-bold leading-tight text-center text-gray-800">
-      Mapa dos locais de coleta
-    </h2>
-    <div id="container_map">
-      <div id="map" class="w-full h-full shadow-xl z-20"></div>
+  <section class="flex justify-center items-center bg-gray-100 pt-14 py-6">
+    <div class="flex flex-col shadow-xl w-fit justify-center rounded px-8 py-8 bg-white">
+      <h2 class="pb-12 text-5xl font-bold leading-tight text-center text-gray-800">
+        Mapa dos locais de coleta
+      </h2>
+      <div class="flex">
+        <div class="flex">
+          <div id="container_map">
+            <div id="map" class="w-full h-full shadow-xl z-20"></div>
+          </div>
+        </div>
+        <div id="container_contato" class="container xl:px-6 pt-4 text-gray-800">
+          <form action="/submit" method="POST" class="bg-white shadow-md rounded px-8 pt-6 pb-8 mb-4">
+            <h2 class="text-center text-2xl font-bold mb-6">
+              Entre em contato conosco
+            </h2>
+            <div class="mb-4">
+              <label class="block text-gray-700 text-sm font-bold mb-2" for="name">
+                Nome
+              </label>
+              <input
+                class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none    focus:shadow-outline"
+                id="name" type="text" name="name" required />
+            </div>
+            <div class="mb-4">
+              <label class="block text-gray-700 text-sm font-bold mb-2" for="email">
+                Email
+              </label>
+              <input
+                class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none    focus:shadow-outline"
+                id="email" type="email" name="email" required />
+            </div>
+            <div class="mb-4">
+              <label class="block text-gray-700 text-sm font-bold mb-2" for="phone">
+                Telefone
+              </label>
+              <input
+                class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none    focus:shadow-outline"
+                id="phone" type="tel" name="phone" required />
+            </div>
+            <div class="mb-6">
+              <label class="block text-gray-700 text-sm font-bold mb-2" for="description">
+                Descrição
+              </label>
+              <textarea
+                class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none    focus:shadow-outline"
+                id="description" name="description" rows="4" required></textarea>
+            </div>
+            <div class="flex items-center justify-between">
+              <button
+                class="bg-gray-400 hover:bg-gray-500 text-white font-bold py-2 px-4 rounded focus:outline-none    focus:shadow-outline"
+                type="submit">
+                Enviar
+              </button>
+            </div>
+          </form>
+        </div>
+      </div>
     </div>
   </section>
 
@@ -223,7 +275,7 @@
 
   <!-- Seção contato -->
   <section id="contato" class="flex justify-center container mx-auto py-6 mb-6">
-    <div class="container mx-auto xl:px-36 pt-4 pb-12 text-gray-800">
+    <!-- <div class="container mx-auto xl:px-36 pt-4 pb-12 text-gray-800">
       <form action="/submit" method="POST" class="bg-white shadow-md rounded px-8 pt-6 pb-8 mb-4">
         <h2 class="text-center text-2xl font-bold mb-6">
           Entre em contato conosco
@@ -268,80 +320,69 @@
           </button>
         </div>
       </form>
-    </div>
-  </section>
-
-  <!--Footer-->
-  <footer class="bg-gray-100">
+    </div> -->
     <div class="container mx-auto px-8">
       <div class="w-full flex flex-col md:flex-row py-6">
-        <div class="flex-1 mb-6 text-black">
-          <a class="flex toggleColour text-white no-underline hover:no-underline font-bold text-2xl lg:text-4xl"
-            href="#">
-            IANDÊ
-            <!--Icon from: http://www.potlabicons.com/ -->
-            <svg class="ml-2" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" width="40" height="40">
-              <!--! Font Awesome Pro 6.4.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license (Commercial License) Copyright 2023 Fonticons, Inc. -->
-              <path fill="#000000" filter="url(#shadow)"
-                d="M272 96c-78.6 0-145.1 51.5-167.7 122.5c33.6-17 71.5-26.5 111.7-26.5h88c8.8 0 16 7.2 16 16s-7.2 16-16 16H288 216s0 0 0 0c-16.6 0-32.7 1.9-48.2 5.4c-25.9 5.9-50 16.4-71.4 30.7c0 0 0 0 0 0C38.3 298.8 0 364.9 0 440v16c0 13.3 10.7 24 24 24s24-10.7 24-24V440c0-48.7 20.7-92.5 53.8-123.2C121.6 392.3 190.3 448 272 448l1 0c132.1-.7 239-130.9 239-291.4c0-42.6-7.5-83.1-21.1-119.6c-2.6-6.9-12.7-6.6-16.2-.1C455.9 72.1 418.7 96 376 96L272 96z" />
-            </svg>
-          </a>
-        </div>
         <div class="flex-1">
-          <p class="uppercase text-gray-500 md:mb-6">Links</p>
+          <p class="uppercase text-white font-bold md:mb-6">Links</p>
           <ul class="list-reset mb-6">
             <li class="mt-2 inline-block mr-2 md:block md:mr-0">
-              <a href="#" class="no-underline hover:underline text-gray-800 hover:text-lime-700">FAQ</a>
+              <a href="#" class="no-underline hover:underline text-white">FAQ</a>
             </li>
             <li class="mt-2 inline-block mr-2 md:block md:mr-0">
-              <a href="#" class="no-underline hover:underline text-gray-800 hover:text-lime-700">Ajuda</a>
+              <a href="#" class="no-underline hover:underline text-white">Ajuda</a>
             </li>
             <li class="mt-2 inline-block mr-2 md:block md:mr-0">
-              <a href="#" class="no-underline hover:underline text-gray-800 hover:text-lime-700">Suporte</a>
+              <a href="#" class="no-underline hover:underline text-white">Suporte</a>
             </li>
           </ul>
         </div>
         <div class="flex-1">
-          <p class="uppercase text-gray-500 md:mb-6">Legal</p>
+          <p class="uppercase text-white font-bold md:mb-6">Legal</p>
           <ul class="list-reset mb-6">
             <li class="mt-2 inline-block mr-2 md:block md:mr-0">
-              <a href="#" class="no-underline hover:underline text-gray-800 hover:text-lime-700">Termos</a>
+              <a href="#" class="no-underline hover:underline text-white">Termos</a>
             </li>
             <li class="mt-2 inline-block mr-2 md:block md:mr-0">
-              <a href="#" class="no-underline hover:underline text-gray-800 hover:text-lime-700">Privacidade</a>
+              <a href="#" class="no-underline hover:underline text-white">Privacidade</a>
             </li>
           </ul>
         </div>
         <div class="flex-1">
-          <p class="uppercase text-gray-500 md:mb-6">Social</p>
+          <p class="uppercase text-white font-bold md:mb-6">Social</p>
           <ul class="list-reset mb-6">
             <li class="mt-2 inline-block mr-2 md:block md:mr-0">
-              <a href="#" class="no-underline hover:underline text-gray-800 hover:text-lime-700">Facebook</a>
+              <a href="#" class="no-underline hover:underline text-white">Facebook</a>
             </li>
             <li class="mt-2 inline-block mr-2 md:block md:mr-0">
-              <a href="#" class="no-underline hover:underline text-gray-800 hover:text-lime-700">Linkedin</a>
+              <a href="#" class="no-underline hover:underline text-white">Linkedin</a>
             </li>
             <li class="mt-2 inline-block mr-2 md:block md:mr-0">
-              <a href="#" class="no-underline hover:underline text-gray-800 hover:text-lime-700">Twitter</a>
+              <a href="#" class="no-underline hover:underline text-white">Twitter</a>
             </li>
           </ul>
         </div>
         <div class="flex-1">
-          <p class="uppercase text-gray-500 md:mb-6">Organização</p>
+          <p class="uppercase text-white font-bold md:mb-6">Organização</p>
           <ul class="list-reset mb-6">
             <li class="mt-2 inline-block mr-2 md:block md:mr-0">
-              <a href="#" class="no-underline hover:underline text-gray-800 hover:text-lime-700">Sobre</a>
+              <a href="#" class="no-underline hover:underline text-white">Sobre</a>
             </li>
             <li class="mt-2 inline-block mr-2 md:block md:mr-0">
-              <a href="#" class="no-underline hover:underline text-gray-800 hover:text-lime-700">Blog</a>
+              <a href="#" class="no-underline hover:underline text-white">Blog</a>
             </li>
             <li class="mt-2 inline-block mr-2 md:block md:mr-0">
-              <a href="#" class="no-underline hover:underline text-gray-800 hover:text-lime-700">Contato</a>
+              <a href="#" class="no-underline hover:underline text-white">Contato</a>
             </li>
           </ul>
         </div>
       </div>
     </div>
+  </section>
+
+  <!--Footer-->
+  <footer class="bg-gray-100">
+
   </footer>
   <script src="js/scroll.js"></script>
   <script src="js/nav.js"></script>
