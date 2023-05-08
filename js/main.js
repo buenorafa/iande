@@ -1,5 +1,13 @@
+import "./nav.js";
+import "./scroll.js";
+import L from "leaflet";
+
+import "leaflet/dist/leaflet.css";
+import "../style.css";
+import "@fortawesome/fontawesome-free/css/all.css";
+
 // Projetos
-cards = [
+const cards = [
   {
     link: "www.google.com",
     title: "Projeto Batatinha",
@@ -47,12 +55,15 @@ function createCard(json) {
 // Seleciono a tag do grid
 const grid = document.querySelector("#cardGrid");
 // Chamada da func de criar o card p/ cada objeto do array e salvo numa unica string content
-content = cards.map((elem) => createCard(elem)).join("");
+const content = cards.map((elem) => createCard(elem)).join("");
 // Adiciono o conteudo dinamicamente no html
 grid.innerHTML = content;
 
 function initMap() {
-  const map = L.map("map").setView([-7.1351608999508835, -34.873484685903584], 13); // Set the initial coordinates and zoom level
+  const map = L.map("map").setView(
+    [-7.1351608999508835, -34.873484685903584],
+    13
+  ); // Set the initial coordinates and zoom level
 
   L.tileLayer("https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png", {
     attribution:
@@ -60,10 +71,15 @@ function initMap() {
   }).addTo(map);
 
   // Add a marker to the map
-  L.marker([-7.1351608999508835, -34.873484685903584]).addTo(map).bindPopup("<b>IFPB</b><br>Coleta de baterias.").openPopup();
-  L.marker([-7.146863620243023, -34.84931609537628]).addTo(map).bindPopup("<b>Carrefour</b><br>Coleta de baterias e<br> óleo de cozinha.").openPopup();
+  L.marker([-7.1351608999508835, -34.873484685903584])
+    .addTo(map)
+    .bindPopup("<b>IFPB</b><br>Coleta de baterias.")
+    .openPopup();
+  L.marker([-7.146863620243023, -34.84931609537628])
+    .addTo(map)
+    .bindPopup("<b>Carrefour</b><br>Coleta de baterias e<br> óleo de cozinha.")
+    .openPopup();
 }
 
 // Call the initMap function when the page loads
 window.addEventListener("DOMContentLoaded", initMap);
-
