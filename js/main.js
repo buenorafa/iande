@@ -1,11 +1,23 @@
 import "./nav.js";
 import "./scroll.js";
+// import "leaflet";
+// import L from "leaflet";
+import "leaflet/dist/leaflet.css";
+import icon from "leaflet/dist/images/marker-icon.png";
 import L from "leaflet";
+import iconShadow from "leaflet/dist/images/marker-shadow.png";
 
+import "leaflet/dist/leaflet.js";
 import "leaflet/dist/leaflet.css";
 import "../style.css";
 import "@fortawesome/fontawesome-free/css/all.css";
 
+let DefaultIcon = L.icon({
+  iconUrl: icon,
+  shadowUrl: iconShadow,
+});
+
+L.Marker.prototype.options.icon = DefaultIcon;
 // Projetos
 const cards = [
   {
