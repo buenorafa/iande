@@ -30,7 +30,20 @@ function initMap() {
     .addTo(map)
     .bindPopup("<b>Carrefour</b><br>Coleta de baterias e<br> óleo de cozinha.")
     .openPopup();
+  L.marker([-7.108210950219513, -34.88391394868439])
+    .addTo(map)
+    .bindPopup("<b>Astramare</b><br>Associação de catadores.")
+    .openPopup(); //added-Pedro
+ L.marker([-7.076522692097711, -34.83483879033098])
+    .addTo(map)
+    .bindPopup("<b>Ascare</b><br>Associação de catadores.")
+    .openPopup(); //added-Pedro
+  L.marker([-7.183981778122121, -34.83621209377201])
+    .addTo(map)
+    .bindPopup("<b>Ascare</b><br>Associação de catadores.")
+    .openPopup(); //added-Pedro  
 }
+
 
 // Call the initMap function when the page loads
 window.addEventListener("DOMContentLoaded", initMap);
