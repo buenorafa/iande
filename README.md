@@ -1,6 +1,7 @@
 # Projeto Iandê
 
-----> Link do projeto: iande.vercel.app
+----> [Link do projeto](iande.vercel.app)
+
 Iandê, palavra do Tupi-guarani, significa “você” e é usada como enfoque para o principal agente na resolução do problema escolhido: a população. Iandê é uma página de internet que conta com seções diversificadas para mitigar a questão do problema do lixo, especificamente a falha na coleta seletiva. 
 
 ## Pilares do projeto
